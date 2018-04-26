@@ -1,0 +1,88 @@
+body {
+	background-color: #232323;
+	margin: 0;
+	font-family: montserrat;
+	font-weight: 600;
+}
+
+.square {
+	width: 30%;
+	background: purple;
+	padding-bottom: 30%;
+	float: left;
+	margin: 1.66%;
+	/*to get rounded borders on the squares:*/
+	border-radius: 15%;
+	/*this makes the squares fade away as they disappear:*/
+	transition: background 0.6s;
+/*	the transition property might not work the same in all browsers.
+	add the following 2 properties to be as browser friendly as possible:*/
+	-webkit-transition: background 0.6s;
+	-moz-transition: background 0.6s;
+/*	these 2 are broswer prefixes. webkit is an engine that browsers like
+	Safari use. Moz, short for Mozilla, which is what Firefox is built on.*/
+/*	These are added for more support because the transition property is not
+	built into all browsers yet.*/
+}
+
+#container {
+	margin: 20px auto; /*"auto" centers it.*/
+	max-width: 600px;
+}
+
+h1 {
+	text-align: center;
+	line-height: 1.1;
+	font-weight: normal;
+	color: white;
+	background: steelblue;
+	margin: 0;
+	text-transform: uppercase;
+	padding: 20px 0;
+}
+
+#colorDisplay {
+	font-size: 200%;
+}
+
+#message {
+	display: inline-block;
+	width: 10%; /*Original width in video was 20%*/
+}
+
+#stripe {
+	background: white;
+	height: 30px;
+	text-align: center;
+}
+
+.selected {
+	color: white;
+	background: steelblue;
+}
+
+button {
+	border: none;
+	background: none;
+	text-transform: uppercase;
+	height: 100%;
+	font-weight: 700;
+	color: steelblue;
+	letter-spacing: 1px;
+	font-size: inherit;
+	/*The font inherits the font size
+	and we don't have to set it.*/
+	transition: all 0.3s;
+	/*This gives the fading effect when colors change/disappear.
+	The first value is what we want to transition.
+	The second value is how long we want it to take.*/
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	/*to get rid of outline around button:*/
+	outline: none;
+}
+
+button:hover {
+	color: white;
+	background: steelblue;
+}
